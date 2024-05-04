@@ -1,8 +1,8 @@
 
 
-**Title: Socket Mailing System**
+** Socket Mailing System **
 
-**Description:**
+
 
 The Socket Mailing System is a Python program designed for network-based communication, enabling users to send, receive, and manage emails via sockets. It provides a command-line interface for seamless interaction and is suitable for integration into various projects requiring basic email functionalities.
 
