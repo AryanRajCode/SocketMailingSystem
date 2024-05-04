@@ -37,7 +37,7 @@ The Socket Mailing System is a Python program designed for network-based communi
 - Network connectivity for multi-user communication
 
 **Note:** This repository serves as a foundational framework for a socket-based mailing system and can be extended further to include additional features such as attachments, user groups, and enhanced security measures.
-
+**This Is Fun Project  Dont use it for  professional  use If you want it to use it as professional You can coscustomize it **
 --- 
 
 This description is more suitable for a README file in a GitHub repository, providing potential contributors and users with an overview of the project's functionality and purpose.
