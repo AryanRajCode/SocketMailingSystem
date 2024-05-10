@@ -28,12 +28,19 @@ def receive_mail(username):
 
 def send_mail(sender, recipient, message):
     try:
-        if not os.path.exists(f"{recipient}.txt"):
-            with open(f"{recipient}.txt", 'w') as recipient_file:
-                recipient_file.write('')
-        with open(f"{recipient}.txt", 'a+') as recipient_file:
-            recipient_file.write(f'Sender: {sender}\nMessage: {message}\n')
-        return "Mail sent successfully"
+        file_path = f"{recipient}.txt"
+        if not os.path.exists(file_path):
+            return "User Not Found"
+        else:
+            with open(file_path, 'r') as recipient_file:
+                # Do nothing, just checking if file exists
+                pass
+
+            with open(file_path, 'a') as recipient_file:
+                recipient_file.write(f'Sender: {sender}\nMessage: {message}\n')
+            return "Mail sent successfully"
+    except FileNotFoundError:
+        return "User Not Found"
     except Exception as e:
         return f"ERROR: {e}"
 
