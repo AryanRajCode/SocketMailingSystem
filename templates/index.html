@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mail Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to Mail Client</h1>
+    <ul>
+        <li><a href="{{ url_for('read_mail') }}">Read Mails</a></li>
+        <li><a href="{{ url_for('write_mail') }}">Write A Mail</a></li>
+        <li><a href="{{ url_for('create_user') }}">Create User</a></li>
+        <li><a href="{{ url_for('delete_mails') }}">Delete My Mails</a></li>
+    </ul>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash-message">
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>
